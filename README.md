@@ -55,19 +55,21 @@ Vagrant is a command line tool, and thus it helps to be familiar with Bash comma
 
 Using the terminal of your choice (Git Bash is a valid option for Windows), use `cd` to go where you cloned this repo. If you are new to the shell, try using `ls` and `pwd` to get your bearings. Using `cd ..` will take you up to the parent directory of the one you are in.
 
-Once you are in the place where you cloned this repo, run `vagrant up`.
+Once you are in the place where you cloned this repo, run:
+
+```
+vagrant up
+```
 
 ### ssh into the running VM
 
-Once the `vagrant up` command finishes, it is time to ssh into your virtual machine.  Simply type
+Once the `vagrant up` command finishes, it is time to ssh into your virtual machine.  Simply type:
 
 ```
 vagrant ssh
 ```
 
-And you will connect to your virtual machine.  You now have access to a Linux machine that is preconfigured with our Ruby on Rails development environment setup.
-
-When you're done working in your VM, type `exit` to close the ssh connection and return to your computer's terminal.
+And you will connect to your virtual machine.  You now have access to a Linux machine that is preconfigured with our Ruby on Rails development environment setup. When you're done working in your VM, type `exit` to close the ssh connection and return to your computer's terminal.
 
 ### Doing exercises
 
@@ -92,7 +94,7 @@ When you are done using the VM, make sure to shut it down by running:
 vagrant halt
 ```
 
-**Make sure you do this inside your clone of this repository**.
+**Make sure you do this inside your clone of this repository.**
 
 ## Updating
 
