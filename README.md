@@ -75,7 +75,7 @@ In your "home" directory, there will be a directory called "workspace". This is 
 The workflow for doing exercises will be:
 
 1. Fork the exercise repository on GitHub
-2. Clone the repository **into the "workspace" directory inside of this repository** using your preferred method (GitHub Desktop or just `git`).
+2. Clone the repository **into the "workspace" directory inside of your clone of this repository** using your preferred method (GitHub Desktop or just `git`).
 3. ssh into the VM using `vagrant ssh`.
 4. Go to the "workspace" directory inside the VM using `cd workspace`.
 5. Make your changes locally on your computer. Test them inside the VM.
