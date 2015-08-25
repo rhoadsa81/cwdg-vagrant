@@ -70,7 +70,7 @@ When you're done working in your VM, type `exit` to close the ssh connection and
 
 ### Doing exercises
 
-In your "home" directory, there will be a directory called "workspace". This is where we will be doing our exercises. This directory is linked from inside the VM to the "workspace" folder inside this cloned repository on your computer. This way, you can use [Atom](https://atom.io/) or [Sublime Text](www.sublimetext.com) to edit files within the "workspace" folder natively on your computer, and your changes will be present inside of the Vagrant VM.
+In your "home" directory, there will be a directory called "workspace". This is where we will be doing our exercises. This directory is linked from inside the VM to the "workspace" folder inside this cloned repository on your computer. This way, you can use [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com) to edit files within the "workspace" folder natively on your computer, and your changes will be present inside of the Vagrant VM.
 
 The workflow for doing exercises will be:
 
