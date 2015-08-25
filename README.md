@@ -46,7 +46,7 @@ Vagrant is a command line tool, and thus it helps to be familiar with Bash comma
 
 1. Pat yourself on the back for being cool.
 2. `cd` into the directory where you would like to put this repository.
-3. If you have your ssh keys uploaded to GitHub, run `git clone git@github.com:CWDG/cwdg-vagrant`. Otherwise, run `git clone https://github.com/robbyrussell/oh-my-zsh.git`. **If you do not know whether you have your ssh keys uploaded to GitHub, you probably do not.
+3. If you have your ssh keys uploaded to GitHub, run `git clone git@github.com:CWDG/cwdg-vagrant`. Otherwise, run `git clone https://github.com/robbyrussell/oh-my-zsh.git`. **If you do not know whether you have your ssh keys uploaded to GitHub, you probably do not.**
 
 ## Workflow
 
