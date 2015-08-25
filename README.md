@@ -32,7 +32,7 @@ Vagrant is a command line tool, and thus it helps to be familiar with Bash comma
 
 ### Clone this repository
 
-GitHub Desktop
+**GitHub Desktop**
 
 1. It will be necessary for you to fork this repository before cloning it. To do so, simply hit the 'Fork' link in the top-right of this page.
 2. Open GitHub Desktop, if you do not already have it open.
@@ -42,7 +42,7 @@ GitHub Desktop
 6. Click the 'Clone cwdg-vagrant' button.
 7. Select where on your computer you want to have the CWDG vagrant. It doesn't matter where you put it, just remember where it is.
 
-Command Line
+**Command Line**
 
 1. Pat yourself on the back for being cool.
 2. `cd` into the directory where you would like to put this repository.
