@@ -6,8 +6,9 @@ This document is meant to be a getting started guide to [Vagrant](http://vagrant
 
 When I talk about the Terminal throughout this document, I mean one of the following things:
 
-- If you're on Mac or Linux, I mean the Terminal.  Mac users, you can find the Terminal application in the Utilities folder (or just type 'Terminal' into Spotlight). Linux people: You know what the Terminal is.
-- If you're on Windows, the Terminal is Git Bash.  You should install it with Git (outlined below).
+- If you're on Mac, I mean Terminal. You can find the Terminal application in the Utilities folder (or just type 'Terminal' into Spotlight).
+- If you're using Linux, search for 'terminal' using whatever tool your distribution comes with. Some common ones are 'gnome-terminal', 'xfce-terminal', 'rxvt', and 'xterm'.
+- If you're on Windows, the terminal is Git Bash.  You should install it along with Git (outlined below).
 
 ## Installation
 
