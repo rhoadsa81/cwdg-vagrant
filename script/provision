@@ -6,15 +6,19 @@ function install {
     apt-get -y install "$@" >/dev/null 2>&1
 }
 
-echo updating package information
-apt-add-repository -y ppa:brightbox/ruby-ng >/dev/null 2>&1
-apt-get -y update >/dev/null 2>&1
+apt-get -y update && apt-get -y upgrade >/dev/null 2>&1
 
 install 'development tools' build-essential
 
-install Ruby ruby2.2 ruby2.2-dev
-update-alternatives --set ruby /usr/bin/ruby2.2 >/dev/null 2>&1
-update-alternatives --set gem /usr/bin/gem2.2 >/dev/null 2>&1
+install curl curl
+
+# Install Ruby with RVM
+if ! hash rvm > /dev/null; then
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  \curl -sSL https://get.rvm.io | bash -s stable
+fi
+
+rvm install 2.2.3
 
 echo installing Bundler
 gem install bundler -N >/dev/null 2>&1
