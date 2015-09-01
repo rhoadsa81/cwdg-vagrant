@@ -18,6 +18,9 @@ if ! hash rvm > /dev/null; then
   \curl -sSL https://get.rvm.io | bash -s stable
 fi
 
+usermod vagrant -aG rvm
+source /etc/profile.d/rvm.sh
+
 rvm install 2.2.3
 
 echo installing Bundler
