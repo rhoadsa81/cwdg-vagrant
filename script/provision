@@ -1,39 +1,31 @@
 # The ouput of all these installation steps is noisy. With this utility
 # the progress report is nice and concise.
 function install {
-    echo installing $1
+    echo "Installing $1"
     shift
     apt-get -y install "$@" >/dev/null 2>&1
 }
 
-apt-get -y update && apt-get -y upgrade >/dev/null 2>&1
-
 install 'development tools' build-essential
 
 install curl curl
-
-# Install Ruby with RVM
-if ! hash rvm > /dev/null; then
-  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-  \curl -sSL https://get.rvm.io | bash -s stable
-fi
-
-usermod vagrant -aG rvm
-source /etc/profile.d/rvm.sh
-
-rvm install 2.2.3
-
-echo installing Bundler
-gem install bundler -N >/dev/null 2>&1
-
 install Git git
+install 'Nokogiri dependencies' libxml2 libxml2-dev libxslt1-dev
+install 'ExecJS runtime' nodejs
+install ZSH zsh
 
 install PostgreSQL postgresql postgresql-contrib libpq-dev
 sudo -u postgres createuser --superuser vagrant
 
-install 'Nokogiri dependencies' libxml2 libxml2-dev libxslt1-dev
-install 'ExecJS runtime' nodejs
-install ZSH zsh
+# Install Ruby with RVM
+if ! hash rvm > /dev/null; then
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  \curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.3
+  usermod vagrant -aG rvm
+fi
+
+echo "Installing Bundler"
+gem install bundler
 
 # Needed for docs generation.
 update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
@@ -41,4 +33,4 @@ update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
 # Setup ZSH for the sane
 chsh -s /bin/zsh
 
-echo 'all set, rock on!'
+echo 'All set, rock on!'
