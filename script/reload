@@ -1,17 +1,7 @@
 #!/bin/bash
 
-
-# Stash local changes to aviod conflicts with pull
-git stash
-
-# Pull in changes
-git pull https://github.com/CWDG/cwdg-vagrant master
-
 # Remove all vagrant crap
 rm -rf .vagrant
 
 # Regen Vagrant
 vagrant up
-
-# Re-apply changes
-git stash apply
